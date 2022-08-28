@@ -1,13 +1,21 @@
 
 
-
-
 from django import forms
  
 
-class NForm(forms.Form):
-    X1 = forms.CharField(required=False)
-    X2 = forms.CharField()
-    X3 = forms.CharField()
-    X4 = forms.CharField()
-    X5 = forms.CharField()
+GEEKS_CHOICES =(
+    ("EURUSD", "EURUSD"),
+    ("EURCAD", "EURCAD"),
+    ("USDCAD", "USDCAD"),
+    ("AUDUSD", "AUDUSD"),
+    ("GBPUSD", "GBPUSD"),
+)
+  
+
+
+class CForm(forms.Form):
+
+    Form_field =forms.ChoiceField(choices = GEEKS_CHOICES)
+         
+
+
