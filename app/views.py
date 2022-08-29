@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from .fun import funn
+from .fun import fun
 from .forms import CForm
 
 def home(request):
@@ -11,7 +11,7 @@ def home(request):
 
         print('hey')
         form = CForm()
-        print(funn())
+        print(fun())
 
 
     elif request.method == 'POST' :
